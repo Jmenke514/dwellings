@@ -7,6 +7,10 @@ class ApartmentsController < ApplicationController
     @apartments = Apartment.all
   end
 
+  def users
+    @users = User.all
+  end
+
   # GET /apartments/1
   # GET /apartments/1.json
   def show
@@ -77,6 +81,6 @@ class ApartmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def apartment_params
-      params.require(:apartment).permit(:latitude, :longitude, :address, :name, :contact, :image)
+      params.require(:apartment).permit(:latitude, :longitude, :address, :name, :contact, :image, :user_id)
     end
 end
