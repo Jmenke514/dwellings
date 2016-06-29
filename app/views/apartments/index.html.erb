@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <!-- <th>Latitude </th>
-      <th>Longitude </th> -->
+      <th>Owner</th>
       <th>Address </th>
       <th>Name </th>
       <th>Contact </th>
@@ -17,7 +16,7 @@
   <tbody>
     <% @apartments.each do |apartment| %>
       <tr>
-        <td><%= image_tag apartment.user.image.url(:default_url) %></td>
+        <td> <%= link_to image_tag(apartment.user.image.url(:default_url)) %></td>
         <td><%= apartment.address %></td>
         <td><%= apartment.name %></td>
         <td><%= apartment.contact %></td>

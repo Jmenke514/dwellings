@@ -6,7 +6,6 @@ class CreateApartments < ActiveRecord::Migration
       t.string :address
       t.string :name
       t.string :contact
-
       t.timestamps null: false
     end
   end
